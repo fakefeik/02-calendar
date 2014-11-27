@@ -14,9 +14,9 @@ namespace Calendar
         [STAThread]
         static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(args.Length > 0 ? args[0] : "25.12.2013"));
+            //Application.Run(new Form1(args.Length > 0 ? args[0] : "25.12.2013"));
+            var calendar = new Calendar(args.Length > 0 ? args[0] : "25.12.2013");
+            calendar.SaveToFile("calendar.bmp");
         }
     }
 }
